@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 		{
 			int indexForNewNumber = Random.Range(0, EmptyTiles.Count);
 			int randomNum = Random.Range(0,10);
-			if (randomNum == 0)
+			if (randomNum == 0 || randomNum == 1)
 				EmptyTiles[indexForNewNumber].Number = 4;
 			else
 				EmptyTiles[indexForNewNumber].Number = 2;
