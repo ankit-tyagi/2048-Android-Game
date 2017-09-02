@@ -3471,6 +3471,8 @@ GameObject:
   - component: {fileID: 1367756854}
   - component: {fileID: 1367756853}
   - component: {fileID: 1367756852}
+  - component: {fileID: 1367756856}
+  - component: {fileID: 1367756855}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3523,6 +3525,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367756855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367756851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d882b64b2af5ba4cbf7f8e871e79e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+--- !u!114 &1367756856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367756851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89dec29a0b40b1f4e83fd0ecb8cd9056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1380158738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +3985,7 @@ GameObject:
   - component: {fileID: 1688997084}
   - component: {fileID: 1688997089}
   - component: {fileID: 1688997088}
+  - component: {fileID: 1688997090}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4066,6 +4092,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
+--- !u!114 &1688997090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688997083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc76c2f5a83b874478f13b5e0a857eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileStyles:
+  - number: 2
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 0
+    TileColor:
+      serializedVersion: 2
+      rgba: 0
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
 --- !u!1 &1714480332
 GameObject:
   m_ObjectHideFlags: 0
