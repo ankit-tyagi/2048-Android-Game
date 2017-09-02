@@ -5,8 +5,24 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour {
 
+	private int number;
 	private Text TileText;
 	private Image TileImage;
+
+	public int Number{
+		get{
+			return number;
+		}
+		set{
+			number = value;	
+			if (number == 0)
+				SetEmpty ();
+			else {
+				ApplyStyle (number);
+				SetVisible ();
+			}
+		}
+	}
 
 	void Awake(){
 		TileText = GetComponentInChildren<Text> ();
@@ -14,7 +30,7 @@ public class Tile : MonoBehaviour {
 	}
 
 	void ApplyStyleFromHolder(int index){
-		TileText.text = TileStyleHolder.Instance.TileStyles [index].number;
+		TileText.text = TileStyleHolder.Instance.TileStyles [index].number.ToString();
 		TileText.color = TileStyleHolder.Instance.TileStyles [index].TextColor;
 		TileImage.color = TileStyleHolder.Instance.TileStyles [index].TileColor;
 	}
@@ -76,6 +92,16 @@ public class Tile : MonoBehaviour {
 			Debug.LogError ("check the numbers you want to apply style");
 			break;
 		}
+	}
+
+	private void SetVisible() {
+		TileImage.enabled = true;
+		TileText.enabled = true;
+	}
+
+	private void SetEmpty() {
+		TileImage.enabled = false;
+		TileText.enabled = false;
 	}
 
 	// Use this for initialization

@@ -6,7 +6,10 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Tile[] AllTilesOneDim = GameObject.FindObjectsOfType<Tile> ();
+		foreach (Tile t in AllTilesOneDim) {
+			t.Number = 0;
+		} 
 	}
 	
 	// Update is called once per frame
