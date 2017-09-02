@@ -6,11 +6,7 @@ using UnityEngine.UI;
 public class Tile : MonoBehaviour {
 
 	public int IndexRow;
-	public int indexCol;
-
-	private int number;
-	private Text TileText;
-	private Image TileImage;
+	public int IndexCol;
 
 	public int Number{
 		get{
@@ -26,6 +22,10 @@ public class Tile : MonoBehaviour {
 			}
 		}
 	}
+
+	private int number;
+	private Text TileText;
+	private Image TileImage;
 
 	void Awake(){
 		TileText = GetComponentInChildren<Text> ();
