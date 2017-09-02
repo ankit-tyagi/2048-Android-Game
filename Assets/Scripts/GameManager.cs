@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+	private TileStyle[,] AllTiles = new TileStyle[4, 4];
+
 	// Use this for initialization
 	void Start () {
 		Tile[] AllTilesOneDim = GameObject.FindObjectsOfType<Tile> ();
 		foreach (Tile t in AllTilesOneDim) {
 			t.Number = 0;
+			AllTiles [t.IndexRow, t.indexCol] = t;
 		} 
 	}
 	

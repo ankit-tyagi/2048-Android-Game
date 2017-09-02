@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour {
 
+	public int IndexRow;
+	public int indexCol;
+
 	private int number;
 	private Text TileText;
 	private Image TileImage;
