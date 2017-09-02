@@ -4107,84 +4107,119 @@ MonoBehaviour:
   - number: 2
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 14082275
     TextColor:
       serializedVersion: 2
-      rgba: 0
-  - number: 0
+      rgba: 4278190080
+  - number: 4
+    TileColor:
+      serializedVersion: 2
+      rgba: 10267576
+    TextColor:
+      serializedVersion: 2
+      rgba: 4278190080
+  - number: 8
     TileColor:
       serializedVersion: 2
       rgba: 0
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 16
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 32
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 64
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 128
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 256
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 512
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 1024
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 2048
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 4096
     TileColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
-  - number: 0
+  - number: 8192
     TileColor:
       serializedVersion: 2
+      rgba: 16777215
+    TextColor:
+      serializedVersion: 2
       rgba: 0
+  - number: 16384
+    TileColor:
+      serializedVersion: 2
+      rgba: 16777215
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 32764
+    TileColor:
+      serializedVersion: 2
+      rgba: 16777215
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 65536
+    TileColor:
+      serializedVersion: 2
+      rgba: 16777215
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+  - number: 131072
+    TileColor:
+      serializedVersion: 2
+      rgba: 16777215
     TextColor:
       serializedVersion: 2
       rgba: 0
