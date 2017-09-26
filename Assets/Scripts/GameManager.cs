@@ -19,22 +19,22 @@ public class GameManager : MonoBehaviour {
 			EmptyTiles.Add (t);
 		} 
 
-		columns.Add(new Tile[4](AllTiles[0,0],AllTiles[1,0],AllTiles[2,0],AllTiles[3,0]));
-		columns.Add(new Tile[4](AllTiles[0,1],AllTiles[1,1],AllTiles[2,1],AllTiles[3,1]));
-		columns.Add(new Tile[4](AllTiles[0,2],AllTiles[1,2],AllTiles[2,2],AllTiles[3,2]));
-		columns.Add(new Tile[4](AllTiles[0,3],AllTiles[1,3],AllTiles[2,3],AllTiles[3,3]));
+		columns.Add (new Tile[4] {AllTiles [0, 0], AllTiles [1, 0], AllTiles [2, 0], AllTiles [3, 0]});
+		columns.Add (new Tile[4]{ AllTiles [0, 1], AllTiles [1, 1], AllTiles [2, 1], AllTiles [3, 1] });
+		columns.Add (new Tile[4]{ AllTiles [0, 2], AllTiles [1, 2], AllTiles [2, 2], AllTiles [3, 2] });
+		columns.Add (new Tile[4]{ AllTiles [0, 3], AllTiles [1, 3], AllTiles [2, 3], AllTiles [3, 3] });
 
-		rows.Add(new Tile[4](AllTiles[0,0],AllTiles[0,1],AllTiles[0,2],AllTiles[0,3]));
-		rows.Add(new Tile[4](AllTiles[1,0],AllTiles[1,1],AllTiles[1,2],AllTiles[1,3]));
-		rows.Add(new Tile[4](AllTiles[2,0],AllTiles[2,1],AllTiles[2,2],AllTiles[2,3]));
-		rows.Add(new Tile[4](AllTiles[3,0],AllTiles[3,1],AllTiles[3,2],AllTiles[3,3]));
+		rows.Add (new Tile[4]{ AllTiles [0, 0], AllTiles [0, 1], AllTiles [0, 2], AllTiles [0, 3] });
+		rows.Add (new Tile[4]{ AllTiles [1, 0], AllTiles [1, 1], AllTiles [1, 2], AllTiles [1, 3] });
+		rows.Add (new Tile[4]{ AllTiles [2, 0], AllTiles [2, 1], AllTiles [2, 2], AllTiles [2, 3] });
+		rows.Add (new Tile[4]{ AllTiles [3, 0], AllTiles [3, 1], AllTiles [3, 2], AllTiles [3, 3] });
 
 	}
 
 	bool MakeOneMoveDownIndex(Tile[] LineOfTiles){
 		for (int i = 0; i <LineOfTiles.Length-1 ; i++) {
 			//move block
-			if (LineOfTiles [i].Number == 0 && LineOfTiles [i + 1] != 0) {
+			if (LineOfTiles [i].Number == 0 && LineOfTiles [i + 1].Number != 0) {
 				LineOfTiles [i].Number = LineOfTiles [i + 1].Number;
 				LineOfTiles [i + 1].Number = 0;
 				return true;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 	bool MakeOneMoveUpIndex(Tile[] LineOfTiles){
 		for (int i = LineOfTiles.Length-1; i > 0 ; i--) {
 			//move block
-			if (LineOfTiles [i].Number == 0 && LineOfTiles [i - 1] != 0) {
+			if (LineOfTiles [i].Number == 0 && LineOfTiles [i - 1].Number != 0) {
 				LineOfTiles [i].Number = LineOfTiles [i - 1].Number;
 				LineOfTiles [i - 1].Number = 0;
 			}
