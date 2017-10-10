@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
         rows.Add(new Tile[] { AllTiles[2, 0], AllTiles[2, 1], AllTiles[2, 2], AllTiles[2, 3] });
         rows.Add(new Tile[] { AllTiles[3, 0], AllTiles[3, 1], AllTiles[3, 2], AllTiles[3, 3] });
 
-
+        Generate();
+        Generate();
     }
 
     bool MakeOneMoveDownIndex(Tile[] LineOfTiles)
@@ -113,9 +114,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void UpdateEmptyTiles()
+    {
+        EmptyTiles.Clear();
+        foreach(Tile t in AllTiles)
+        {
+            if (t.Number == 0)
+                EmptyTiles.Add(t);
+        }
+    }
+
     public void Move(MoveDirection md)
     {
         Debug.Log(md.ToString() + " move.");
+
+        bool moveMade = false;
 
         ResetMergedFlags();
 
@@ -124,18 +137,36 @@ public class GameManager : MonoBehaviour
             switch (md)
             {
                 case MoveDirection.Down:
-                    while (MakeOneMoveUpIndex(columns[i])) { }
+                    while (MakeOneMoveUpIndex(columns[i]))
+                    {
+                        moveMade = true;
+                    }
                     break;
                 case MoveDirection.Left:
-                    while (MakeOneMoveDownIndex(rows[i])) { }
+                    while (MakeOneMoveDownIndex(rows[i]))
+                    {
+                        moveMade = true;
+                    }
                     break;
                 case MoveDirection.Right:
-                    while (MakeOneMoveUpIndex(rows[i])) { }
+                    while (MakeOneMoveUpIndex(rows[i])) 
+                    {
+                        moveMade = true;
+                    }
                     break;
                 case MoveDirection.Up:
-                    while (MakeOneMoveDownIndex(columns[i])) { }
+                    while (MakeOneMoveDownIndex(columns[i]))
+                    {
+                        moveMade = true;
+                    }
                     break;
             }
+        }
+
+        if (moveMade)
+        {
+            UpdateEmptyTiles();
+            Generate();
         }
     }
 }
