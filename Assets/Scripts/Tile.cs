@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour {
 
-	public int IndexRow;
-	public int IndexCol;
+    public bool mergedThisTurn = false;
+
+	public int indexRow;
+	public int indexCol;
 
 	public int Number{
 		get{
