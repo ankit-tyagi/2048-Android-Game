@@ -30,6 +30,8 @@ public class ScoreTracker : MonoBehaviour {
 
 	void Awake(){
 		Instance = this;
+		//Remove comment if you want to reset high score.
+		//PlayerPrefs.DeleteAll ();
 
 		if (!PlayerPrefs.HasKey ("HighScore"))
 			PlayerPrefs.SetInt ("HighScore", 0);

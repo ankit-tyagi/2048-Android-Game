@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
             if (randomNum == 0)
                 EmptyTiles[indexForNewNumber].Number = 4;
             else
-                EmptyTiles[indexForNewNumber].Number = 128;
+                EmptyTiles[indexForNewNumber].Number = 2;
             EmptyTiles.RemoveAt(indexForNewNumber);
         }
     }
