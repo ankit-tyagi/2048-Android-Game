@@ -3444,7 +3444,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 46.76839, y: 46.76839}
+  m_CellSize: {x: 234.55408, y: 234.55408}
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4438,6 +4438,7 @@ GameObject:
   - component: {fileID: 1688997088}
   - component: {fileID: 1688997090}
   - component: {fileID: 1688997091}
+  - component: {fileID: 1688997092}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4533,6 +4534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dec29a0b40b1f4e83fd0ecb8cd9056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State: 0
+  delay: 0.025
   GameOverScoreText: {fileID: 1888204535}
   GameOverText: {fileID: 849712380}
   YouWonText: {fileID: 1957383321}
@@ -4693,6 +4696,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 944613086}
   HighScoreText: {fileID: 1215435634}
+--- !u!114 &1688997092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688997083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0ddb820089dbd409694c3777018910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714480332
 GameObject:
   m_ObjectHideFlags: 0
