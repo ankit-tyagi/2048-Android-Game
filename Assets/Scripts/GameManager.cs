@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
                 LineOfTiles[i].Number = LineOfTiles[i].Number * 2;
                 LineOfTiles[i + 1].Number = 0;
                 LineOfTiles[i].mergedThisTurn = true;
+				ScoreTracker.Instance.Score += LineOfTiles [i].Number;
                 return true;
             }
         }
@@ -81,7 +82,8 @@ public class GameManager : MonoBehaviour
                 LineOfTiles[i].Number = LineOfTiles[i].Number * 2;
                 LineOfTiles[i - 1].Number = 0;
                 LineOfTiles[i].mergedThisTurn = true;
-                return true;
+				ScoreTracker.Instance.Score += LineOfTiles [i].Number; 
+				return true;
             }
         }
         return false;
