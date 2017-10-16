@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
         Generate();
     }
 
+    public void NewGameButtonHandler()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
     bool MakeOneMoveDownIndex(Tile[] LineOfTiles)
     {
         for (int i = 0; i < LineOfTiles.Length - 1; i++)
