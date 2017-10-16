@@ -2987,7 +2987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1138093627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4533,8 +4533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dec29a0b40b1f4e83fd0ecb8cd9056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverText: {fileID: 849712382}
   GameOverScoreText: {fileID: 1888204535}
+  GameOverText: {fileID: 849712380}
+  YouWonText: {fileID: 1957383321}
   GameOverPanel: {fileID: 1138093626}
 --- !u!114 &1688997089
 MonoBehaviour:

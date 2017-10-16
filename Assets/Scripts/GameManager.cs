@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-	public Text GameOverText;
+	//public Text GameOverText;
 	public Text GameOverScoreText;
+	public GameObject GameOverText;
+	public GameObject YouWonText;
 	public GameObject GameOverPanel; 
 
     private Tile[,] AllTiles = new Tile[4, 4];
@@ -39,8 +41,19 @@ public class GameManager : MonoBehaviour
         Generate();
     }
 
+	private void YouWon()
+	{
+		GameOverText.SetActive(false);
+		YouWonText.SetActive (true);
+		GameOverScoreText.text = ScoreTracker.Instance.Score.ToString ();
+		GameOverPanel.SetActive (true);
+
+	}
+
 	private void GameOver()
 	{
+		//GameOverText.SetActive(true);
+		//YouWonText.SetActive (false);
 		GameOverScoreText.text = ScoreTracker.Instance.Score.ToString ();
 		GameOverPanel.SetActive (true);
 	}
@@ -93,6 +106,9 @@ public class GameManager : MonoBehaviour
                 LineOfTiles[i + 1].Number = 0;
                 LineOfTiles[i].mergedThisTurn = true;
 				ScoreTracker.Instance.Score += LineOfTiles [i].Number;
+				if (LineOfTiles [i].Number == 2048) {
+					YouWon ();
+				}
                 return true;
             }
         }
@@ -117,6 +133,9 @@ public class GameManager : MonoBehaviour
                 LineOfTiles[i - 1].Number = 0;
                 LineOfTiles[i].mergedThisTurn = true;
 				ScoreTracker.Instance.Score += LineOfTiles [i].Number; 
+				if (LineOfTiles [i].Number == 2048) {
+					YouWon ();
+				}
 				return true;
             }
         }
@@ -134,18 +153,18 @@ public class GameManager : MonoBehaviour
             if (randomNum == 0)
                 EmptyTiles[indexForNewNumber].Number = 4;
             else
-                EmptyTiles[indexForNewNumber].Number = 2;
+                EmptyTiles[indexForNewNumber].Number = 128;
             EmptyTiles.RemoveAt(indexForNewNumber);
         }
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))
             Generate();
 
-    }
+    }*/
 
     private void ResetMergedFlags()
     {
@@ -167,7 +186,7 @@ public class GameManager : MonoBehaviour
 
     public void Move(MoveDirection md)
     {
-        Debug.Log(md.ToString() + " move.");
+        //Debug.Log(md.ToString() + " move.");
 
         bool moveMade = false;
 

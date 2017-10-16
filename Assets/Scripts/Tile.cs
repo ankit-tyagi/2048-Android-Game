@@ -93,9 +93,9 @@ public class Tile : MonoBehaviour {
 		case 131072:
 			ApplyStyleFromHolder (16);
 			break;
-		default:
-			Debug.LogError ("check the numbers you want to apply style");
-			break;
+		//default:
+		//	Debug.LogError ("check the numbers you want to apply style");
+		//	break;
 		}
 	}
 
