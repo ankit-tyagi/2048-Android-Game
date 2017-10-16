@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+	public Text GameOverText;
+	public Text GameOverScoreText;
+	public GameObject GameOverPanel; 
 
     private Tile[,] AllTiles = new Tile[4, 4];
     private List<Tile[]> columns = new List<Tile[]>();
@@ -34,6 +38,36 @@ public class GameManager : MonoBehaviour
         Generate();
         Generate();
     }
+
+	private void GameOver()
+	{
+		GameOverScoreText.text = ScoreTracker.Instance.Score.ToString ();
+		GameOverPanel.SetActive (true);
+	}
+
+	bool CanMove()
+	{
+		if (EmptyTiles.Count > 0)
+			return true;
+		else 
+		{
+			//Check Columns
+			for (int i = 0; i < columns.Count; i++) {
+				for (int j = 0; j < rows.Count -1; j++) {
+					if (AllTiles [j, i].Number == AllTiles [j + 1, i].Number)
+						return true;
+				}
+			}
+			//Check rows
+			for (int i = 0; i < rows.Count; i++) {
+				for (int j = 0; j < columns.Count -1; j++) {
+					if (AllTiles [i, j].Number == AllTiles [i, j+1].Number)
+						return true;
+				}
+			}
+			return false;
+		}
+	}
 
     public void NewGameButtonHandler()
     {
@@ -174,6 +208,10 @@ public class GameManager : MonoBehaviour
         {
             UpdateEmptyTiles();
             Generate();
+
+			if (!CanMove ()) {
+				GameOver ();
+			}
         }
     }
 }
